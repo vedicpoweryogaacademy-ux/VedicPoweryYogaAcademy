@@ -47,11 +47,11 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-
+          <div className="flex items-center justify-between h-16 lg:h-20 relative">
+            
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
-              <div className="relative w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden ring-2 ring-saffron-100 group-hover:ring-saffron-400 transition-all duration-300 shadow-sm">
+            <Link href="/" className="flex items-center gap-3 group flex-shrink-0 whitespace-nowrap">
+              <div className="relative w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden ring-2 ring-saffron-100 group-hover:ring-saffron-400 transition-all duration-300 shadow-sm flex-shrink-0">
                 <Image
                   src="/images/logo.jpg"
                   alt="Vedic Power Yoga Academy Logo"
@@ -68,14 +68,14 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center justify-center gap-3 xl:gap-6 px-2">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-bold rounded-full transition-all duration-200 ${
+                    className={`relative px-4 py-2 text-sm font-bold whitespace-nowrap rounded-full transition-all duration-200 ${
                       isActive
                         ? 'text-saffron-600 bg-saffron-50'
                         : 'text-sacred-brown/80 hover:text-saffron-600 hover:bg-saffron-50/50'
@@ -88,7 +88,7 @@ export default function Navbar() {
             </div>
 
             {/* CTA + Hamburger */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 flex-shrink-0">
               <Link
                 href="/contact"
                 id="nav-enroll-btn"
