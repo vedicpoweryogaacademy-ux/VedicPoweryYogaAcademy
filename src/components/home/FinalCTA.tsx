@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Phone, ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, Phone } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 
 export default function FinalCTA() {
   return (
@@ -47,7 +48,7 @@ export default function FinalCTA() {
         </div>
         
         <div className="mt-12 flex items-center justify-center gap-2 text-white/50 text-sm font-semibold uppercase tracking-widest">
-          <MessageCircle size={14} className="text-green-400" />
+          <WhatsAppIcon size={14} className="text-green-400" />
           WhatsApp also available
         </div>
       </div>

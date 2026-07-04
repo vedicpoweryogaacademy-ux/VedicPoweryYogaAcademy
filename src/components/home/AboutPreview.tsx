@@ -22,6 +22,7 @@ export default function AboutPreview() {
                 src="/images/IMG_1567.JPG.jpeg"
                 alt="Guruji in Warrior Pose at Sunset"
                 fill
+                sizes="(max-width: 1024px) 90vw, 45vw"
                 className="object-cover scale-[1.02]"
                 style={{ objectPosition: 'center 30%' }}
               />

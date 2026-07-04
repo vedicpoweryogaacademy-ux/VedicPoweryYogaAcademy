@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Award, ShieldCheck, Clock, MapPin, MessageCircle, ChevronRight, Phone, Mail, Calendar } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 
 const quickLinks = [
   { href: '/', label: 'Home' },
@@ -56,7 +57,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-saffron-500/50 flex-shrink-0">
-                <Image src="/images/logo.jpg" alt="Logo" fill className="object-cover" />
+                <Image src="/images/logo.jpg" alt="Logo" fill sizes="56px" className="object-cover" />
               </div>
               <div>
                 <p className="font-playfair font-bold text-saffron-400 leading-tight">
@@ -105,7 +106,7 @@ export default function Footer() {
                 { 
                   label: 'WhatsApp', 
                   href: 'https://wa.me/918050886649',
-                  icon: <MessageCircle size={18} strokeWidth={2} />
+                  icon: <WhatsAppIcon size={18} />
                 },
               ].map((s) => (
                 <a

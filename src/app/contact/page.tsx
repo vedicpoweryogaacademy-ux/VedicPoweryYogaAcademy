@@ -7,6 +7,7 @@ import {
   Clock, 
   Send 
 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 
 export const metadata: Metadata = {
   title: 'Contact Us | Vedic Power Yoga Academy Bengaluru',
@@ -73,7 +74,8 @@ export default function ContactPage() {
                       +91 78924 79178
                     </a>
                   </div>
-                  <a href="https://wa.me/918050886649" className="text-green-600 font-bold text-xs uppercase tracking-wider hover:text-green-700 transition-colors">
+                  <a href="https://wa.me/918050886649" className="flex items-center gap-1.5 text-green-600 font-bold text-xs uppercase tracking-wider hover:text-green-700 transition-colors mt-2">
+                    <WhatsAppIcon size={14} />
                     WhatsApp Available
                   </a>
                 </div>
@@ -83,7 +85,7 @@ export default function ContactPage() {
                     <Mail size={24} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-playfair font-bold text-sacred-dark text-xl mb-2">Email Us</h3>
-                  <a href="mailto:vedicpoweryogaacademy@gmail.com" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block break-all">
+                  <a href="mailto:vedicpoweryogaacademy@gmail.com" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block whitespace-nowrap">
                     vedicpoweryogaacademy@gmail.com
                   </a>
                 </div>

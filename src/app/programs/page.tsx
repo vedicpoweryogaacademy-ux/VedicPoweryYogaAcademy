@@ -16,8 +16,12 @@ import {
   Laptop,
   CheckCircle2,
   Clock,
-  CalendarDays
+  CalendarDays,
+  Star,
+  Camera,
+  Play
 } from 'lucide-react';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
 
 export const metadata: Metadata = {
   title: 'Yoga Programs | Vedic Power Yoga Academy Bengaluru',
@@ -356,6 +360,7 @@ export default function ProgramsPage() {
               <ArrowRight size={18} />
             </Link>
             <a href="https://wa.me/918050886649" className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-white border border-saffron-200 text-sacred-dark font-bold text-lg hover:border-saffron-400 hover:bg-saffron-50 shadow-sm transition-all duration-300">
+              <WhatsAppIcon size={20} className="text-green-600" />
               WhatsApp Us
             </a>
           </div>

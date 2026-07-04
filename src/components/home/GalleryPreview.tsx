@@ -44,6 +44,7 @@ export default function GalleryPreview() {
               src={images[0]}
               alt="Yoga pose at academy"
               fill
+              sizes="(max-width: 768px) 50vw, 50vw"
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-sacred-dark/0 group-hover:bg-sacred-dark/20 transition-colors duration-500" />
@@ -55,6 +56,7 @@ export default function GalleryPreview() {
                 src={src}
                 alt="Yoga practice"
                 fill
+                sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-sacred-dark/0 group-hover:bg-sacred-dark/20 transition-colors duration-500" />

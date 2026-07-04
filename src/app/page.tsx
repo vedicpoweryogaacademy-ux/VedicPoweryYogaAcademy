@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection';
 import TrustBadges from '@/components/home/TrustBadges';
 import StatsSection from '@/components/home/StatsSection';
 import AboutPreview from '@/components/home/AboutPreview';
+import AwardHighlight from '@/components/home/AwardHighlight';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProgramsPreview from '@/components/home/ProgramsPreview';
 import HealthConditions from '@/components/home/HealthConditions';
@@ -26,6 +27,7 @@ export default function HomePage() {
       <TrustBadges />
       <StatsSection />
       <AboutPreview />
+      <AwardHighlight />
       <MeetFounder />
       <WhyChooseUs />
       <ProgramsPreview />

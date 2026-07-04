@@ -80,11 +80,11 @@ export default function TeachersPage() {
             {/* Photos (Bento Style Grid) */}
             <div className="grid grid-cols-2 gap-4">
               <div className="relative rounded-[2rem] overflow-hidden aspect-[3/4] shadow-lg col-span-1 border border-saffron-50">
-                <Image src="/images/pose-warrior.jpg" alt="Guruji warrior pose" fill className="object-cover" />
+                <Image src="/images/pose-warrior.jpg" alt="Guruji warrior pose" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
               <div className="space-y-4">
                 <div className="relative rounded-[2rem] overflow-hidden aspect-square shadow-lg border border-saffron-50">
-                  <Image src="/images/pose-sunset.jpg" alt="Guruji meditating" fill className="object-cover" />
+                  <Image src="/images/pose-sunset.jpg" alt="Guruji meditating" fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
                 </div>
                 <div className="relative rounded-[2rem] overflow-hidden aspect-square shadow-lg border border-saffron-50 bg-saffron-100 p-6 flex flex-col justify-center items-center text-center">
                   <Award size={40} className="text-saffron-500 mb-2" strokeWidth={1.5} />

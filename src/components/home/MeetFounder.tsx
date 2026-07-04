@@ -19,6 +19,7 @@ export default function MeetFounder() {
                   src="/images/IMG_1568.JPG.jpeg"
                   alt="Guruji Manjunath Sampath in Meditation"
                   fill
+                  sizes="(max-width: 1024px) 90vw, 45vw"
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

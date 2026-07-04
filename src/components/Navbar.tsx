@@ -5,12 +5,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronRight } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Guruji' },
   { href: '/programs', label: 'Yoga Programs' },
-  { href: '/therapy', label: 'Yoga Therapy' },
+  { href: '/healing', label: 'Therapies' },
   { href: '/teachers', label: 'Our Teachers' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/testimonials', label: 'Success Stories' },
@@ -56,6 +57,7 @@ export default function Navbar() {
                   src="/images/logo.jpg"
                   alt="Vedic Power Yoga Academy Logo"
                   fill
+                  sizes="44px"
                   className="object-cover"
                 />
               </div>
@@ -178,6 +180,7 @@ export default function Navbar() {
               href="https://wa.me/918050886649"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-full bg-green-50 text-green-600 font-bold text-sm border border-green-200 hover:bg-green-100 transition-colors"
             >
+              <WhatsAppIcon size={16} />
               WhatsApp Us
             </a>
           </div>

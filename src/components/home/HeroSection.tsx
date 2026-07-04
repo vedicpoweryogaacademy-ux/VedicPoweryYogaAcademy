@@ -87,6 +87,7 @@ export default function HeroSection() {
                 src="/images/IMG_1568.JPG.jpeg"
                 alt="Guruji Manjunath Sampath at Vedic Power Yoga Academy"
                 fill
+                sizes="(max-width: 1024px) 90vw, 45vw"
                 className="object-cover object-center"
                 priority
               />
