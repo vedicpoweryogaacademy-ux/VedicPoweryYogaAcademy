@@ -135,7 +135,7 @@ export default function AboutPage() {
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
               <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-2xl ring-1 ring-black/5">
                 <Image
-                  src="/images/IMG_1568.JPG.jpeg"
+                  src="/images/IMG_1855.PNG"
                   alt="Guruji in meditation"
                   fill
                   className="object-cover"

@@ -16,7 +16,7 @@ export default function MeetFounder() {
             <div className="relative">
               <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] lg:aspect-[3/4] shadow-[0_0_40px_rgba(245,166,35,0.15)] ring-2 ring-saffron-500/20 group">
                 <Image
-                  src="/images/IMG_1568.JPG.jpeg"
+                  src="/images/award-hero.png"
                   alt="Guruji Manjunath Sampath in Meditation"
                   fill
                   sizes="(max-width: 1024px) 90vw, 45vw"

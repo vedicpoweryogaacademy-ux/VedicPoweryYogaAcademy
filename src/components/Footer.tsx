@@ -190,7 +190,7 @@ export default function Footer() {
                 <Mail size={20} className="text-saffron-500 flex-shrink-0" />
                 <a
                   href="mailto:vedicpoweryogaacademy@gmail.com"
-                  className="hover:text-saffron-400 transition-colors break-all font-light"
+                  className="hover:text-saffron-400 transition-colors whitespace-nowrap font-light"
                 >
                   vedicpoweryogaacademy@gmail.com
                 </a>

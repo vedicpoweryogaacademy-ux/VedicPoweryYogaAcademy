@@ -4,11 +4,11 @@ import { Camera, ArrowRight } from 'lucide-react';
 
 export default function GalleryPreview() {
   const images = [
-    '/images/pose-warrior.jpg',
-    '/images/pose-meditation.jpg',
-    '/images/pose-lotus.jpg',
-    '/images/pose-prone.jpg',
-    '/images/pose-sunset.jpg',
+    '/images/IMG_1855.PNG',             // Large hero image
+    '/images/kids/kids-03.jpg',         // WhatsApp ...42 (1).jpeg
+    '/images/kids/kids-12.jpg',         // WhatsApp ...45 (1).jpeg
+    '/images/pose-meditation.jpg',      // IMG_1562.JPG
+    '/images/pose-kneeling.jpg',        // IMG_1565.JPG
   ];
 
   return (
@@ -42,9 +42,9 @@ export default function GalleryPreview() {
           <div className="col-span-2 md:col-span-2 row-span-2 relative rounded-3xl overflow-hidden aspect-square group shadow-lg">
             <Image
               src={images[0]}
-              alt="Yoga pose at academy"
+              alt="6th National Yoga Conclave"
               fill
-              sizes="(max-width: 768px) 50vw, 50vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-sacred-dark/0 group-hover:bg-sacred-dark/20 transition-colors duration-500" />
@@ -54,7 +54,7 @@ export default function GalleryPreview() {
             <div key={i} className="relative rounded-3xl overflow-hidden aspect-square group shadow-md">
               <Image
                 src={src}
-                alt="Yoga practice"
+                alt={`Yoga practice moment ${i + 1}`}
                 fill
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-110 transition-transform duration-700"
