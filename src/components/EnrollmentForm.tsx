@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Send, CheckCircle2, ChevronDown } from 'lucide-react';
+import { Send, CheckCircle2, ChevronDown, User, Phone, Mail, BookOpen, Clock, Activity, CalendarDays } from 'lucide-react';
 
 const programs = [
   'Hatha Yoga',
@@ -29,7 +29,7 @@ const batches = [
   'Online'
 ];
 
-function CustomSelect({ id, options, placeholder, required }: { id: string, options: string[], placeholder: string, required?: boolean }) {
+function CustomSelect({ id, options, placeholder, required, icon: Icon }: { id: string, options: string[], placeholder: string, required?: boolean, icon: any }) {
   const [isOpen, setIsOpen] = useState(false);
   const [selected, setSelected] = useState('');
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -50,14 +50,17 @@ function CustomSelect({ id, options, placeholder, required }: { id: string, opti
       <input type="text" id={id} required={required} value={selected} onChange={() => {}} className="absolute opacity-0 w-full h-full -z-10 pointer-events-none" />
       
       <div
-        className={`w-full px-5 py-4 rounded-2xl border ${isOpen ? 'border-saffron-400 ring-2 ring-saffron-400/20' : 'border-saffron-100'} text-sm transition-all bg-[#FAFAF8] cursor-pointer flex items-center justify-between group`}
+        className={`w-full pl-12 pr-5 py-4 rounded-2xl border ${isOpen ? 'border-saffron-400 ring-4 ring-saffron-400/10' : 'border-saffron-100'} text-sm transition-all bg-[#FAFAF8] cursor-pointer flex items-center justify-between group`}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className={selected ? 'text-sacred-dark' : 'text-sacred-brown/50'}>
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron-400 group-hover:text-saffron-500 transition-colors">
+          <Icon size={18} strokeWidth={2} />
+        </div>
+        <span className={selected ? 'text-sacred-dark font-medium' : 'text-sacred-brown/50'}>
           {selected || placeholder}
         </span>
         <ChevronDown 
-          className={`text-saffron-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'group-hover:translate-y-0.5'}`} 
+          className={`text-saffron-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : 'group-hover:translate-y-0.5'}`} 
           size={18} 
         />
       </div>
@@ -94,17 +97,18 @@ export default function EnrollmentForm() {
 
   if (submitted) {
     return (
-      <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-saffron-100 flex flex-col items-center justify-center text-center min-h-[400px]">
-        <div className="w-20 h-20 bg-saffron-50 rounded-full flex items-center justify-center mb-6">
-          <CheckCircle2 size={40} className="text-saffron-500" />
+      <div className="bg-white rounded-[2.5rem] p-10 shadow-xl border border-saffron-100 flex flex-col items-center justify-center text-center min-h-[500px]">
+        <div className="w-24 h-24 bg-saffron-50 rounded-full flex items-center justify-center mb-8 relative">
+          <div className="absolute inset-0 bg-saffron-100 rounded-full animate-ping opacity-20" />
+          <CheckCircle2 size={48} className="text-saffron-500 relative z-10" />
         </div>
-        <h3 className="font-playfair text-3xl font-bold text-sacred-dark mb-3">Thank You!</h3>
-        <p className="text-sacred-brown/70 text-lg mb-8 max-w-sm">
+        <h3 className="font-playfair text-4xl font-bold text-sacred-dark mb-4">Thank You!</h3>
+        <p className="text-sacred-brown/70 text-lg mb-10 max-w-sm leading-relaxed">
           Your enrollment request has been received. Our team will call you back within 24 hours to confirm your trial.
         </p>
         <button
           onClick={() => setSubmitted(false)}
-          className="px-8 py-4 rounded-full bg-sacred-dark text-white font-bold hover:bg-saffron-500 hover:scale-105 transition-all duration-300 shadow-lg"
+          className="px-8 py-4 rounded-full bg-gradient-to-r from-sacred-dark to-sacred-brown text-white font-bold hover:shadow-lg hover:shadow-sacred-dark/30 hover:scale-105 transition-all duration-300"
         >
           Submit Another Request
         </button>
@@ -115,99 +119,127 @@ export default function EnrollmentForm() {
   return (
     <form
       id="enrollment-form"
-      className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-xl border border-saffron-100 space-y-6 relative overflow-hidden"
+      className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-2xl shadow-saffron-500/5 border border-saffron-100 space-y-6 relative overflow-hidden"
       onSubmit={(e) => {
         e.preventDefault();
         setSubmitted(true);
       }}
     >
-      <div className="absolute top-0 right-0 w-32 h-32 bg-saffron-500/10 rounded-full blur-[40px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-saffron-500/10 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="grid sm:grid-cols-2 gap-6 relative z-10">
         <div>
-          <label htmlFor="form-name" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Full Name *</label>
-          <input
-            id="form-name"
-            type="text"
-            required
-            placeholder="Your name"
-            className="w-full px-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-2 focus:ring-saffron-400/20 text-sacred-dark text-sm transition-all bg-[#FAFAF8]"
-          />
+          <label htmlFor="form-name" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Full Name *</label>
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron-400 group-focus-within:text-saffron-500 transition-colors pointer-events-none">
+              <User size={18} strokeWidth={2} />
+            </div>
+            <input
+              id="form-name"
+              type="text"
+              required
+              placeholder="Your name"
+              className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all bg-[#FAFAF8] placeholder:font-normal"
+            />
+          </div>
         </div>
         <div>
-          <label htmlFor="form-age" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Age</label>
+          <label htmlFor="form-age" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Age</label>
+          <div className="relative group">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron-400 group-focus-within:text-saffron-500 transition-colors pointer-events-none">
+              <CalendarDays size={18} strokeWidth={2} />
+            </div>
+            <input
+              id="form-age"
+              type="number"
+              placeholder="Your age"
+              className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all bg-[#FAFAF8] placeholder:font-normal"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="relative z-10 group">
+        <label htmlFor="form-phone" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Phone Number *</label>
+        <div className="relative">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron-400 group-focus-within:text-saffron-500 transition-colors pointer-events-none">
+            <Phone size={18} strokeWidth={2} />
+          </div>
           <input
-            id="form-age"
-            type="number"
-            placeholder="Your age"
-            className="w-full px-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-2 focus:ring-saffron-400/20 text-sacred-dark text-sm transition-all bg-[#FAFAF8]"
+            id="form-phone"
+            type="tel"
+            required
+            placeholder="Your phone number"
+            className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all bg-[#FAFAF8] placeholder:font-normal"
           />
         </div>
       </div>
 
-      <div className="relative z-10">
-        <label htmlFor="form-phone" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Phone Number *</label>
-        <input
-          id="form-phone"
-          type="tel"
-          required
-          placeholder="Your phone number"
-          className="w-full px-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-2 focus:ring-saffron-400/20 text-sacred-dark text-sm transition-all bg-[#FAFAF8]"
-        />
-      </div>
-
-      <div className="relative z-10">
-        <label htmlFor="form-email" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Email Address</label>
-        <input
-          id="form-email"
-          type="email"
-          placeholder="your@email.com"
-          className="w-full px-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-2 focus:ring-saffron-400/20 text-sacred-dark text-sm transition-all bg-[#FAFAF8]"
-        />
+      <div className="relative z-10 group">
+        <label htmlFor="form-email" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Email Address</label>
+        <div className="relative">
+          <div className="absolute left-4 top-1/2 -translate-y-1/2 text-saffron-400 group-focus-within:text-saffron-500 transition-colors pointer-events-none">
+            <Mail size={18} strokeWidth={2} />
+          </div>
+          <input
+            id="form-email"
+            type="email"
+            placeholder="your@email.com"
+            className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all bg-[#FAFAF8] placeholder:font-normal"
+          />
+        </div>
       </div>
 
       <div className="relative z-30">
-        <label htmlFor="form-program" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Interested Program *</label>
+        <label htmlFor="form-program" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Interested Program *</label>
         <CustomSelect 
           id="form-program"
           options={programs}
           placeholder="Select a program"
           required
+          icon={BookOpen}
         />
       </div>
 
       <div className="relative z-20">
-        <label htmlFor="form-batch" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">Preferred Batch *</label>
+        <label htmlFor="form-batch" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">Preferred Batch *</label>
         <CustomSelect 
           id="form-batch"
           options={batches}
           placeholder="Select timing"
           required
+          icon={Clock}
         />
       </div>
 
-      <div className="relative z-10">
-        <label htmlFor="form-health" className="block text-xs font-bold text-sacred-dark mb-2 uppercase tracking-wider">
+      <div className="relative z-10 group">
+        <label htmlFor="form-health" className="block text-[10px] font-bold text-sacred-dark mb-2 uppercase tracking-widest">
           Any Health Conditions? (Optional)
         </label>
-        <textarea
-          id="form-health"
-          rows={3}
-          placeholder="E.g. back pain, diabetes, thyroid — helps us personalize your program"
-          className="w-full px-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-2 focus:ring-saffron-400/20 text-sacred-dark text-sm transition-all resize-none bg-[#FAFAF8]"
-        />
+        <div className="relative">
+          <div className="absolute left-4 top-5 -translate-y-1/2 text-saffron-400 group-focus-within:text-saffron-500 transition-colors pointer-events-none">
+            <Activity size={18} strokeWidth={2} />
+          </div>
+          <textarea
+            id="form-health"
+            rows={3}
+            placeholder="E.g. back pain, diabetes, thyroid — helps us personalize your program"
+            className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all resize-none bg-[#FAFAF8] placeholder:font-normal"
+          />
+        </div>
       </div>
 
       <button
         id="form-submit-btn"
         type="submit"
-        className="relative z-10 w-full py-4 rounded-2xl bg-sacred-dark text-white font-bold text-sm uppercase tracking-wider shadow-lg hover:bg-saffron-600 hover:shadow-saffron-500/30 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 group"
+        className="relative z-10 w-full py-4 rounded-2xl bg-gradient-to-r from-sacred-dark to-sacred-brown text-white font-bold text-sm uppercase tracking-widest shadow-xl shadow-sacred-dark/20 hover:shadow-saffron-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group overflow-hidden"
       >
-        <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-        Submit Enrollment Request
+        <div className="absolute inset-0 bg-gradient-to-r from-saffron-600 to-vermillion-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <Send size={18} className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+        <span className="relative z-10">Submit Enrollment Request</span>
       </button>
 
-      <p className="relative z-10 text-sacred-brown/50 text-xs text-center font-medium">
+      <p className="relative z-10 text-sacred-brown/50 text-[11px] text-center font-bold uppercase tracking-widest pt-2">
         We will call you back within 24 hours to confirm your enrollment
       </p>
     </form>

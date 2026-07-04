@@ -17,14 +17,17 @@ export default function AboutPreview() {
           
           {/* ── IMAGE SECTION ── */}
           <div className="relative order-2 lg:order-1">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] max-w-md mx-auto lg:mx-0">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-video max-w-2xl mx-auto lg:mx-0">
               <Image
-                src="/images/pose-sunset.jpg"
-                alt="Guruji meditating at sunset"
+                src="/images/IMG_1567.JPG.jpeg"
+                alt="Guruji in Warrior Pose at Sunset"
                 fill
-                className="object-cover"
+                className="object-cover scale-[1.02]"
+                style={{ objectPosition: 'center 30%' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-sacred-dark/80 via-transparent to-transparent" />
+              {/* Top edge mask — hides the dark letterbox band in the source image */}
+              <div className="absolute inset-x-0 top-0 h-4 bg-gradient-to-b from-white/40 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent" />
               
               {/* Overlay Content */}
               <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -34,7 +37,7 @@ export default function AboutPreview() {
             </div>
 
             {/* Floating badge */}
-            <div className="absolute top-10 -right-6 lg:-right-10 bg-white rounded-2xl p-5 shadow-2xl border border-saffron-100 flex flex-col items-center justify-center animate-float">
+            <div className="absolute -top-6 -right-4 lg:-right-8 bg-white rounded-2xl p-5 shadow-2xl border border-saffron-100 flex flex-col items-center justify-center animate-float">
               <p className="font-playfair text-4xl font-bold text-gradient-gold">26+</p>
               <p className="text-xs font-semibold text-sacred-dark uppercase tracking-wider mt-1 text-center">
                 Years of<br/>Excellence

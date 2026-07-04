@@ -11,6 +11,7 @@ import {
 export const metadata: Metadata = {
   title: 'Contact Us | Vedic Power Yoga Academy Bengaluru',
   description: 'Get in touch with Vedic Power Yoga Academy. Located in Nagarabhavi, Bengaluru. Call 8050886649 to book your free trial class.',
+  keywords: ['Yoga for Beginners', 'Weight Loss', 'Diabetes', 'PCOD', 'Thyroid', 'Meditation', 'Pranayama', 'Corporate Yoga', 'Kids Yoga', 'Teacher Training'],
 };
 
 export default function ContactPage() {
@@ -64,15 +65,30 @@ export default function ContactPage() {
                     <Phone size={24} strokeWidth={1.5} />
                   </div>
                   <h3 className="font-playfair font-bold text-sacred-dark text-xl mb-2">Call Us</h3>
-                  <a href="tel:+918050886649" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block mb-1">
-                    +91 80508 86649
-                  </a>
+                  <div className="space-y-1 mb-2">
+                    <a href="tel:+918050886649" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block">
+                      +91 80508 86649
+                    </a>
+                    <a href="tel:+917892479178" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block">
+                      +91 78924 79178
+                    </a>
+                  </div>
                   <a href="https://wa.me/918050886649" className="text-green-600 font-bold text-xs uppercase tracking-wider hover:text-green-700 transition-colors">
                     WhatsApp Available
                   </a>
                 </div>
 
                 <div className="bg-white rounded-[2.5rem] p-8 shadow-sm border border-saffron-50 hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-saffron-50 rounded-2xl flex items-center justify-center mb-6 text-saffron-500">
+                    <Mail size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-playfair font-bold text-sacred-dark text-xl mb-2">Email Us</h3>
+                  <a href="mailto:vedicpoweryogaacademy@gmail.com" className="text-sacred-brown/70 text-sm font-medium hover:text-saffron-600 transition-colors block break-all">
+                    vedicpoweryogaacademy@gmail.com
+                  </a>
+                </div>
+
+                <div className="bg-white rounded-[2.5rem] p-8 shadow-sm border border-saffron-50 hover:shadow-md transition-shadow sm:col-span-2 lg:col-span-1">
                   <div className="w-12 h-12 bg-saffron-50 rounded-2xl flex items-center justify-center mb-6 text-saffron-500">
                     <Clock size={24} strokeWidth={1.5} />
                   </div>

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   title: 'Yoga Therapy & Health | Vedic Power Yoga Academy Bengaluru',
   description:
     'Specialized Yoga Therapy at Vedic Power Yoga Academy for Back Pain, Diabetes, PCOD, Thyroid, Stress, Anxiety, Depression, Obesity, Arthritis, Migraine, Hypertension and Insomnia.',
+  keywords: ['Diabetes', 'PCOD', 'Thyroid', 'Weight Loss', 'Yoga for Beginners', 'Meditation', 'Yoga Therapy Bengaluru', 'Pranayama'],
 };
 
 const conditions = [

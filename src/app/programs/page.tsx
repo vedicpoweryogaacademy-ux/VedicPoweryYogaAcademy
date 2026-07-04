@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: 'Yoga Programs | Vedic Power Yoga Academy Bengaluru',
   description:
     'Explore 12 specialized yoga programs at Vedic Power Yoga Academy — Hatha, Ashtanga, Power Yoga, Pranayama, Meditation, Yoga Therapy, Kids, Women, Corporate, Senior Citizens, Teacher Training & Online Yoga.',
+  keywords: ['Yoga for Beginners', 'Weight Loss', 'Meditation', 'Pranayama', 'Corporate Yoga', 'Kids Yoga', 'Teacher Training', 'Blog', 'Events & Workshops'],
 };
 
 const programs = [

@@ -23,7 +23,8 @@ import {
 export const metadata: Metadata = {
   title: 'About Guruji | Shri Manjunath Sampath | Vedic Power Yoga Academy',
   description:
-    'Meet Shri Manjunath Sampath Guruji — Founder of Vedic Power Yoga Academy, Bengaluru. 26 years of yoga expertise, Karnataka State Yoga Pramukh, Ministry of AYUSH recognized trainer.',
+    'Learn about Shri Manjunath Sampath Guruji, founder of Vedic Power Yoga Academy. 26+ years of experience in Ashtanga Yoga, Yoga Therapy, and Teacher Training.',
+  keywords: ['Yoga for Beginners', 'Weight Loss', 'Teacher Training', 'Yoga Therapy', 'Meditation', 'Pranayama', 'Events & Workshops', 'Vedic Power Yoga'],
 };
 
 const credentials = [
@@ -76,47 +77,35 @@ export default function AboutPage() {
     <div className="bg-sacred-cream">
 
       {/* ── Hero Banner ── */}
-      <section className="relative min-h-[70vh] flex items-end overflow-hidden bg-sacred-dark">
-        {/* Background collage of images */}
-        <div className="absolute inset-0 grid grid-cols-3 opacity-40">
-          <div className="relative col-span-1">
-            <Image src="/images/pose-warrior.jpg" alt="" fill className="object-cover object-center" />
-          </div>
-          <div className="relative col-span-1">
-            <Image src="/images/award-ayush.jpg" alt="" fill className="object-cover object-top" />
-          </div>
-          <div className="relative col-span-1">
-            <Image src="/images/pose-sunset.jpg" alt="" fill className="object-cover object-center" />
-          </div>
-        </div>
-        {/* Strong gradient so text is readable */}
-        <div className="absolute inset-0 bg-gradient-to-b from-sacred-dark/60 via-sacred-dark/50 to-sacred-dark" />
-        <div className="absolute inset-0 bg-gradient-to-r from-sacred-dark/80 via-transparent to-sacred-dark/80" />
+      <section className="relative pt-32 pb-16 overflow-hidden bg-sacred-cream">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 inset-x-0 h-96 bg-gradient-to-b from-white to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(circle,rgba(245,166,35,0.06)_0%,transparent_70%)] rounded-full blur-3xl pointer-events-none" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-32 w-full">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-saffron-500/30 bg-saffron-500/10 text-saffron-300 text-xs font-semibold uppercase tracking-widest mb-6">
-              <div className="w-1.5 h-1.5 rounded-full bg-saffron-400 animate-pulse" />
-              Founder & Head Teacher
-            </div>
-            <h1 className="font-playfair font-bold text-white leading-tight">
-              <span className="block text-5xl sm:text-6xl lg:text-7xl">Shri Manjunath</span>
-              <span
-                className="block text-5xl sm:text-6xl lg:text-7xl"
-                style={{
-                  background: 'linear-gradient(135deg, #F5A623 0%, #D4500A 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text',
-                }}
-              >
-                Sampath Guruji
-              </span>
-            </h1>
-            <p className="mt-4 text-white/50 text-base tracking-widest uppercase font-medium">
-              Yoga Expert · Educator · Trainer · Healer
-            </p>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-saffron-200 bg-white text-saffron-600 text-xs font-semibold uppercase tracking-widest mb-8 shadow-sm">
+            <Sparkles size={14} className="text-saffron-500" />
+            Founder & Head Teacher
           </div>
+          
+          <h1 className="font-playfair font-bold text-sacred-dark leading-tight max-w-4xl mx-auto mb-6">
+            <span className="block text-5xl sm:text-6xl lg:text-7xl mb-2">Shri Manjunath</span>
+            <span
+              className="block text-5xl sm:text-6xl lg:text-7xl pb-2"
+              style={{
+                background: 'linear-gradient(135deg, #F5A623 0%, #D4500A 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Sampath Guruji
+            </span>
+          </h1>
+          
+          <p className="text-sacred-brown/70 text-sm sm:text-base tracking-[0.2em] uppercase font-bold flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+            Yoga Expert <span className="text-saffron-300">✦</span> Educator <span className="text-saffron-300">✦</span> Trainer <span className="text-saffron-300">✦</span> Healer
+          </p>
         </div>
       </section>
 
@@ -138,40 +127,36 @@ export default function AboutPage() {
       </section>
 
       {/* ── Profile Section ── */}
-      <section className="py-24 bg-white">
+      <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-5 gap-16 items-start">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
             {/* Image cluster */}
-            <div className="lg:col-span-2 relative">
-              <div className="relative rounded-3xl overflow-hidden aspect-[3/4] shadow-2xl">
+            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+              <div className="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] shadow-2xl ring-1 ring-black/5">
                 <Image
-                  src="/images/pose-sunset.jpg"
+                  src="/images/IMG_1568.JPG.jpeg"
                   alt="Guruji in meditation"
                   fill
                   className="object-cover"
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-sacred-dark/50 to-transparent" />
-              </div>
-              {/* Floating secondary image */}
-              <div className="absolute -bottom-8 -right-6 w-36 h-36 rounded-2xl overflow-hidden shadow-xl ring-4 ring-white">
-                <Image src="/images/award-ayush.jpg" alt="Award ceremony" fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
               </div>
               {/* Experience badge */}
-              <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-gradient-to-br from-saffron-500 to-vermillion-500 flex flex-col items-center justify-center shadow-lg text-white">
-                <span className="font-playfair text-2xl font-bold leading-none">26</span>
-                <span className="text-xs font-semibold leading-tight text-center">Years<br/>Expert</span>
+              <div className="absolute -top-6 -left-6 w-28 h-28 rounded-full bg-gradient-to-br from-saffron-500 to-vermillion-500 flex flex-col items-center justify-center shadow-2xl text-white border-4 border-white">
+                <span className="font-playfair text-3xl font-bold leading-none">26+</span>
+                <span className="text-[0.65rem] font-bold uppercase tracking-widest leading-tight text-center mt-1">Years<br/>Expert</span>
               </div>
             </div>
 
             {/* Content */}
-            <div className="lg:col-span-3 pt-6">
+            <div className="pt-6">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-saffron-50 border border-saffron-200 text-saffron-700 text-xs font-semibold uppercase tracking-widest mb-6">
                 <BookOpen size={12} />
                 Biography
               </div>
-              <h2 className="font-playfair text-4xl font-bold text-sacred-dark mb-6 leading-tight">
+              <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-sacred-dark mb-8 leading-tight">
                 A Life Dedicated to<br />
                 <span
                   style={{
@@ -287,14 +272,14 @@ export default function AboutPage() {
       </section>
 
       {/* ── Timeline ── */}
-      <section className="py-24 bg-sacred-dark">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+      <section className="py-24 lg:py-32 bg-sacred-dark">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-saffron-500/20 bg-saffron-500/10 text-saffron-300 text-xs font-semibold uppercase tracking-widest mb-4">
               <Milestone size={12} />
               The Journey
             </div>
-            <h2 className="font-playfair text-4xl font-bold text-white">
+            <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-white">
               Career{' '}
               <span
                 style={{
@@ -311,25 +296,29 @@ export default function AboutPage() {
 
           <div className="relative">
             {/* Vertical spine */}
-            <div className="absolute left-[3.25rem] top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-saffron-500/20 to-transparent" />
+            <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-saffron-500/20 to-transparent md:-translate-x-1/2" />
 
-            <div className="space-y-6">
+            <div className="space-y-12">
               {timeline.map((item, i) => (
-                <div key={i} className="relative flex gap-8 group">
-                  {/* Year bubble */}
-                  <div className="flex-shrink-0 w-[6.5rem] flex flex-col items-center">
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-saffron-500 to-vermillion-500 flex items-center justify-center shadow-lg group-hover:shadow-saffron-500/30 transition-shadow z-10 relative">
-                      <div className="w-2.5 h-2.5 rounded-full bg-white" />
+                <div key={i} className={`relative flex flex-col md:flex-row gap-8 items-start group ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                  
+                  {/* Event card - half width on desktop */}
+                  <div className={`flex-1 w-full md:w-1/2 pl-16 md:pl-0 ${i % 2 === 0 ? 'md:pl-12 text-left' : 'md:pr-12 text-left md:text-right'}`}>
+                    <div className="bg-white/5 rounded-2xl p-6 md:p-8 border border-white/10 hover:border-saffron-500/30 hover:bg-white/10 transition-all duration-300">
+                      <p className="text-white/80 text-base md:text-lg leading-relaxed">{item.event}</p>
                     </div>
-                    <span className="text-saffron-400 text-xs font-bold mt-2 tracking-wide">{item.year}</span>
                   </div>
 
-                  {/* Event card */}
-                  <div className="flex-1 pb-6">
-                    <div className="bg-white/5 rounded-xl p-5 border border-white/8 hover:border-saffron-500/20 hover:bg-white/8 transition-all duration-300">
-                      <p className="text-white/70 text-sm leading-relaxed">{item.event}</p>
+                  {/* Year bubble - center on desktop */}
+                  <div className="absolute left-6 md:relative md:left-auto top-6 md:top-1/2 md:-translate-y-1/2 -translate-x-1/2 md:translate-x-0 flex-shrink-0 w-[6.5rem] flex flex-col items-center justify-center z-10">
+                    <div className="w-12 h-12 rounded-full bg-sacred-dark border-2 border-saffron-500/50 flex items-center justify-center shadow-[0_0_20px_rgba(245,166,35,0.15)] group-hover:border-saffron-500 group-hover:shadow-[0_0_30px_rgba(245,166,35,0.4)] transition-all duration-300">
+                      <div className="w-3 h-3 rounded-full bg-saffron-400 group-hover:bg-saffron-300 transition-colors" />
                     </div>
+                    <span className="text-saffron-400 text-sm font-bold mt-4 tracking-widest">{item.year}</span>
                   </div>
+
+                  {/* Empty spacer for opposite side on desktop */}
+                  <div className="hidden md:block flex-1 w-1/2" />
                 </div>
               ))}
             </div>

@@ -7,8 +7,26 @@ export const metadata: Metadata = {
   title: 'Vedic Power Yoga Academy | Center for Vedic Culture, Bengaluru',
   description:
     'Vedic Power Yoga Academy — Ministry of AYUSH recognized yoga kendra in Bengaluru. 26+ years of expertise in Ashtanga Yoga, Pranayama, Yoga Therapy, Kids Yoga and Teacher Training. Founded by Shri Manjunath Sampath Guruji.',
-  keywords:
-    'yoga academy bengaluru, vedic yoga, ashtanga yoga, yoga therapy, pranayama, yoga classes bengaluru, guruji yoga, ministry of ayush yoga, IYA yoga center',
+  keywords: [
+    'Yoga for Beginners',
+    'Weight Loss',
+    'Diabetes',
+    'PCOD',
+    'Thyroid',
+    'Meditation',
+    'Pranayama',
+    'Corporate Yoga',
+    'Kids Yoga',
+    'Teacher Training',
+    'Blog',
+    'Events & Workshops',
+    'yoga academy bengaluru',
+    'vedic yoga',
+    'ashtanga yoga',
+    'yoga therapy',
+    'yoga classes bengaluru',
+    'guruji yoga'
+  ],
   openGraph: {
     title: 'Vedic Power Yoga Academy | Bengaluru',
     description: 'Ancient wisdom. Modern science. Healthy body. Peaceful mind.',

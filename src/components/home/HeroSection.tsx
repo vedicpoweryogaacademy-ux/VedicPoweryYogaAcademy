@@ -84,8 +84,8 @@ export default function HeroSection() {
           <div className="absolute inset-x-4 lg:inset-x-0 bottom-0 top-12 lg:top-0 bg-white p-3 rounded-[3rem] rounded-t-[10rem] shadow-2xl border border-saffron-500/10">
             <div className="relative w-full h-full rounded-[2.5rem] rounded-t-[9.5rem] overflow-hidden">
               <Image
-                src="/images/pose-sunset.jpg"
-                alt="Guruji Yoga Practice"
+                src="/images/IMG_1568.JPG.jpeg"
+                alt="Guruji Manjunath Sampath at Vedic Power Yoga Academy"
                 fill
                 className="object-cover object-center"
                 priority

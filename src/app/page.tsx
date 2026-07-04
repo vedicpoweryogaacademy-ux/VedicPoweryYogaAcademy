@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: 'Vedic Power Yoga Academy | Best Yoga Classes in Bengaluru',
   description:
     'Join Vedic Power Yoga Academy — Ministry of AYUSH recognized yoga center in Bengaluru. Expert classes in Ashtanga, Pranayama, Yoga Therapy, Kids & Corporate Yoga. 26+ years experience.',
+  keywords: ['Yoga for Beginners', 'Weight Loss', 'Diabetes', 'PCOD', 'Thyroid', 'Meditation', 'Pranayama', 'Corporate Yoga', 'Kids Yoga', 'Teacher Training'],
 };
 
 export default function HomePage() {
@@ -25,10 +26,10 @@ export default function HomePage() {
       <TrustBadges />
       <StatsSection />
       <AboutPreview />
+      <MeetFounder />
       <WhyChooseUs />
       <ProgramsPreview />
       <HealthConditions />
-      <MeetFounder />
       <ClassTimings />
       <GalleryPreview />
       <TestimonialsPreview />

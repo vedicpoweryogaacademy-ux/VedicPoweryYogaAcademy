@@ -47,11 +47,11 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20 relative">
+          <div className="flex items-center justify-between h-16 lg:h-[72px]">
             
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group flex-shrink-0 whitespace-nowrap">
-              <div className="relative w-10 h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden ring-2 ring-saffron-100 group-hover:ring-saffron-400 transition-all duration-300 shadow-sm flex-shrink-0">
+            {/* Logo — left column */}
+            <Link href="/" className="flex items-center gap-3 group flex-shrink-0 whitespace-nowrap lg:w-[220px]">
+              <div className="relative w-10 h-10 lg:w-11 lg:h-11 rounded-full overflow-hidden ring-2 ring-saffron-100 group-hover:ring-saffron-400 transition-all duration-300 shadow-sm flex-shrink-0">
                 <Image
                   src="/images/logo.jpg"
                   alt="Vedic Power Yoga Academy Logo"
@@ -60,25 +60,25 @@ export default function Navbar() {
                 />
               </div>
               <div className="hidden sm:block">
-                <p className="font-playfair font-bold text-sacred-dark text-sm lg:text-base leading-tight group-hover:text-saffron-600 transition-colors">
+                <p className="font-playfair font-bold text-sacred-dark text-sm leading-tight group-hover:text-saffron-600 transition-colors">
                   Vedic Power Yoga
                 </p>
-                <p className="text-sacred-brown/60 text-[10px] lg:text-xs tracking-wider uppercase font-semibold">Center for Vedic Culture</p>
+                <p className="text-sacred-brown/60 text-[10px] tracking-wider uppercase font-semibold">Center for Vedic Culture</p>
               </div>
             </Link>
 
-            {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center justify-center gap-3 xl:gap-6 px-2">
+            {/* Desktop Nav — center column, absolutely centered */}
+            <div className="hidden lg:flex items-center justify-center gap-1 flex-1">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-bold whitespace-nowrap rounded-full transition-all duration-200 ${
+                    className={`relative px-3.5 py-2 text-[13px] font-semibold whitespace-nowrap rounded-full transition-all duration-200 ${
                       isActive
-                        ? 'text-saffron-600 bg-saffron-50'
-                        : 'text-sacred-brown/80 hover:text-saffron-600 hover:bg-saffron-50/50'
+                        ? 'text-saffron-600 bg-saffron-50 shadow-sm'
+                        : 'text-sacred-dark/70 hover:text-saffron-600 hover:bg-saffron-50/60'
                     }`}
                   >
                     {link.label}
@@ -87,12 +87,12 @@ export default function Navbar() {
               })}
             </div>
 
-            {/* CTA + Hamburger */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            {/* CTA + Hamburger — right column */}
+            <div className="flex items-center gap-3 flex-shrink-0 lg:w-[220px] justify-end">
               <Link
                 href="/contact"
                 id="nav-enroll-btn"
-                className="hidden sm:inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full bg-sacred-dark text-white font-bold text-sm shadow-md hover:bg-saffron-600 hover:shadow-saffron-500/25 hover:scale-105 transition-all duration-300"
+                className="hidden sm:inline-flex items-center gap-1.5 px-6 py-2.5 rounded-full bg-sacred-dark text-white font-semibold text-[13px] shadow-md hover:bg-saffron-600 hover:shadow-saffron-500/25 hover:scale-105 transition-all duration-300"
               >
                 Book Trial
                 <ChevronRight size={14} strokeWidth={2.5} />
