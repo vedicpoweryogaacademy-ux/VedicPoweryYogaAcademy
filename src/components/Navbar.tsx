@@ -92,6 +92,8 @@ export default function Navbar() {
 
             {/* CTA + Hamburger — right column */}
             <div className="flex items-center gap-3 flex-shrink-0 lg:w-[220px] justify-end">
+
+
               <Link
                 href="/contact"
                 id="nav-enroll-btn"
@@ -175,7 +177,7 @@ export default function Navbar() {
               href="/contact"
               className="flex items-center justify-center gap-2 w-full py-4 rounded-full bg-sacred-dark text-white font-bold text-sm shadow-lg hover:bg-saffron-600 transition-colors"
             >
-              Book Free Trial
+              Book
             </Link>
             <a
               href="https://wa.me/918050886649"
@@ -184,6 +186,7 @@ export default function Navbar() {
               <WhatsAppIcon size={16} />
               WhatsApp Us
             </a>
+
           </div>
         </div>
       </div>

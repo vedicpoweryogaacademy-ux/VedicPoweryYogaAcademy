@@ -10,6 +10,7 @@ const programs = [
   'Pranayama',
   'Meditation / Dhyana',
   'Yoga Therapy',
+  'Agnihotra',
   "Kids' Yoga",
   "Women's Yoga",
   'Corporate Yoga',

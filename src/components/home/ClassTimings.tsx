@@ -32,7 +32,7 @@ export default function ClassTimings() {
               href="/contact"
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-sacred-dark text-white font-bold text-base shadow-lg hover:bg-saffron-500 hover:scale-105 transition-all duration-300"
             >
-              Book Free Trial
+              Book
               <ArrowRight size={18} />
             </Link>
           </div>

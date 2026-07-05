@@ -171,29 +171,30 @@ export default function AboutPage() {
                 </span>
               </h2>
 
-              <div className="space-y-4 text-sacred-brown/70 text-base leading-relaxed">
+              <div className="space-y-5 text-sacred-brown/80 text-base leading-relaxed">
                 <p>
                   Shri Manjunath Sampath Guruji is a renowned yoga expert with over{' '}
-                  <strong className="text-sacred-dark font-semibold">26 years of dedicated experience</strong>{' '}
-                  in yoga education, teacher training, holistic wellness, Agnihotra, and Pranic Healing. He has
-                  devoted his life to spreading the transformative benefits of authentic Vedic yoga.
+                  <strong className="text-sacred-dark font-semibold">26 years of dedicated experience</strong>. 
+                  In 2023, he established the <strong className="text-sacred-dark font-semibold">Vedic Power Yoga Academy</strong> — a Ministry of AYUSH recognized center — to bring authentic Vedic yoga and holistic healing to Bengaluru.
                 </p>
-                <p>
-                  As the <strong className="text-sacred-dark font-semibold">Karnataka State Yoga Pramukh</strong>{' '}
-                  for Vidya Bharati — the education wing of the Rashtriya Swayamsevak Sangh — Guruji has shaped
-                  yoga education in hundreds of schools across Karnataka, personally training over 200 teachers.
-                </p>
-                <p>
-                  His approach uniquely blends ancient Vedic wisdom with modern scientific understanding of the
-                  human body. Every class under Guruji is a carefully crafted experience that goes far beyond
-                  physical postures — addressing breath, mind, emotions, and spiritual growth simultaneously.
-                </p>
-                <p>
-                  In 2023, he formally established{' '}
-                  <strong className="text-sacred-dark font-semibold">Vedic Power Yoga Academy</strong> — a
-                  Ministry of AYUSH recognized yoga kendra and Registered Associate Centre of the Indian Yoga
-                  Association, New Delhi — to bring authentic yoga education to all walks of life in Bengaluru.
-                </p>
+
+                <div className="bg-saffron-50/50 rounded-2xl p-6 border border-saffron-100/50">
+                  <h3 className="font-playfair font-bold text-sacred-dark text-lg mb-4">A Legacy in Yoga Education:</h3>
+                  <ul className="space-y-4 list-disc list-inside marker:text-saffron-400">
+                    <li>
+                      Rashtrotthana vidya kendra schools in Karnataka (CBSE schools)have a 19 years experience and yoga subject Head and mentor,
+                    </li>
+                    <li>
+                      He served as the <strong className="text-sacred-dark font-semibold">Head of the Yoga Research and Yoga Curriculum Development Committee</strong> at <strong className="text-sacred-dark font-semibold">Samvit Research Foundation, Bengaluru</strong> for 7 years.
+                    </li>
+                    <li>
+                      During this tenure, he led approximately <strong className="text-sacred-dark font-semibold">28 District and State-level camps</strong> for the development of Yoga curriculum for students from Class 1 to Class 12, and for the training of Yoga Teachers.
+                    </li>
+                    <li>
+                      He also served as the <strong className="text-sacred-dark font-semibold">Karnataka State Yoga Pramukh</strong> for Vidya Bharati, personally training over 200 teachers.
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               {/* Specializations */}

@@ -48,10 +48,10 @@ export default function ContactPage() {
                 </div>
                 <h3 className="font-playfair font-bold text-sacred-dark text-xl mb-2">Visit Academy</h3>
                 <p className="text-sacred-brown/70 text-sm leading-relaxed mb-4">
-                  2nd stage, 11th block, 100ft ring road, beside BDA complex, Naagarabhaavi, Bengaluru, Karnataka 560072
+                  Sunrise Medical And Clinic, 4th cross, 6, Dasarahalli Main Rd, Narayanapura, Bengaluru, Karnataka 560077
                 </p>
                 <a
-                  href="https://maps.google.com/?q=Vedic+Power+Yoga+Academy+Nagarabhavi"
+                  href="https://share.google/yKaPncXFckiWFK7hH"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-saffron-600 font-bold text-xs uppercase tracking-wider hover:text-vermillion-500 transition-colors"

@@ -9,7 +9,7 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState<GalleryCategory>('All');
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const categories: GalleryCategory[] = ['All', '6th National Conclave', 'Yoga for Kids', 'Poses', 'Meditation', 'Events', 'Awards', 'Academy'];
+  const categories: GalleryCategory[] = ['All', 'Events'];
 
   const filteredImages = activeCategory === 'All'
     ? galleryImages
@@ -58,36 +58,16 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* ── Categories ── */}
-      <section className="relative z-10 bg-[#FAFAF8] pb-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 border ${
-                  activeCategory === category
-                    ? 'bg-saffron-500 text-white border-saffron-500 shadow-md transform scale-105'
-                    : 'bg-white text-sacred-dark/70 border-saffron-100 hover:border-saffron-300 hover:text-saffron-600'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Gallery Masonry ── */}
       <section className="py-12 relative z-10 bg-white min-h-[50vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6">
             {filteredImages.map((img, i) => (
               <div 
                 key={`${img.src}-${i}`}
-                className="relative rounded-2xl overflow-hidden shadow-sm group break-inside-avoid border border-saffron-50 cursor-pointer"
+                className="relative rounded-2xl overflow-hidden shadow-sm group break-inside-avoid border border-saffron-50 cursor-pointer mb-6"
                 onClick={() => setLightboxIndex(i)}
               >
                 {/* Natural image sizes with next/image requires using a wrapper or next/image with width/height, 
@@ -106,13 +86,7 @@ export default function GalleryPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-sacred-dark/80 via-sacred-dark/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                   
-                  {/* Overlay Content */}
-                  <div className="absolute bottom-0 left-0 w-full p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-saffron-500 text-white text-[10px] font-bold uppercase tracking-wider mb-2">
-                      <ImageIcon size={12} />
-                      {img.category}
-                    </span>
-                  </div>
+                  {/* Overlay Content removed since we no longer display categories */}
                 </div>
               </div>
             ))}
@@ -172,7 +146,6 @@ export default function GalleryPage() {
               </div>
               <div className="absolute bottom-[-40px] text-center text-white/90">
                 <p className="font-medium">{filteredImages[lightboxIndex].alt}</p>
-                <p className="text-xs text-white/50 mt-1 uppercase tracking-wider">{filteredImages[lightboxIndex].category}</p>
               </div>
             </div>
           </div>
