@@ -96,27 +96,27 @@ export default function HeroSection() {
           </div>
 
           {/* Floating Card: Experience */}
-          <div className="absolute bottom-16 -left-4 lg:-left-12 bg-white/90 backdrop-blur-md p-5 rounded-3xl shadow-xl border border-white/50 animate-float" style={{ animationDelay: '0s' }}>
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-saffron-500 to-vermillion-500 flex items-center justify-center shadow-lg">
-                 <span className="font-playfair text-xl font-bold text-white">26</span>
+          <div className="absolute bottom-6 sm:bottom-16 -left-2 sm:-left-4 lg:-left-12 bg-white/95 backdrop-blur-md p-3 sm:p-5 rounded-2xl sm:rounded-3xl shadow-xl border border-white/50 animate-float scale-[0.85] sm:scale-100 origin-bottom-left z-20" style={{ animationDelay: '0s' }}>
+            <div className="flex items-center gap-3 sm:gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-gradient-to-br from-saffron-500 to-vermillion-500 flex items-center justify-center shadow-lg">
+                 <span className="font-playfair text-lg sm:text-xl font-bold text-white">26</span>
               </div>
               <div>
-                <p className="text-sacred-dark font-bold text-sm">Years of</p>
-                <p className="text-sacred-brown/60 text-xs font-semibold uppercase tracking-widest mt-0.5">Experience</p>
+                <p className="text-sacred-dark font-bold text-xs sm:text-sm">Years of</p>
+                <p className="text-sacred-brown/60 text-[10px] sm:text-xs font-semibold uppercase tracking-widest mt-0.5">Experience</p>
               </div>
             </div>
           </div>
 
           {/* Floating Card: Tag */}
-          <div className="absolute top-24 -right-4 lg:-right-8 bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-xl border border-white/50 animate-float" style={{ animationDelay: '2s' }}>
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center">
-                <Leaf size={16} className="text-emerald-500" strokeWidth={2.5} />
+          <div className="absolute top-8 sm:top-24 -right-2 sm:-right-4 lg:-right-8 bg-white/95 backdrop-blur-md px-4 py-3 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl shadow-xl border border-white/50 animate-float scale-[0.85] sm:scale-100 origin-top-right z-20" style={{ animationDelay: '2s' }}>
+            <div className="flex items-center gap-2 sm:gap-3">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-50 flex items-center justify-center">
+                <Leaf className="text-emerald-500 w-3.5 h-3.5 sm:w-4 sm:h-4" strokeWidth={2.5} />
               </div>
               <div>
-                <p className="text-sacred-dark font-bold text-sm">Holistic Wellness</p>
-                <p className="text-sacred-brown/60 text-[10px] font-bold uppercase tracking-wider mt-0.5">Mind & Body</p>
+                <p className="text-sacred-dark font-bold text-xs sm:text-sm">Holistic Wellness</p>
+                <p className="text-sacred-brown/60 text-[8px] sm:text-[10px] font-bold uppercase tracking-wider mt-0.5">Mind & Body</p>
               </div>
             </div>
           </div>
