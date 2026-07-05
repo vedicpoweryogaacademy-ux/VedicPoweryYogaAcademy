@@ -172,9 +172,9 @@ export default function Footer() {
               <li className="flex gap-4 text-white/70 items-start">
                 <MapPin size={20} className="text-saffron-500 flex-shrink-0 mt-0.5" />
                 <span className="leading-relaxed font-light">
-                  #6, 4th Cross, Balaji Layout,<br />
-                  N. Nagenahalli, Bengaluru – 560077,<br />
-                  Karnataka, India
+                  Sunrise Medical And Clinic, 4th cross, 6,<br />
+                  Dasarahalli Main Rd, Narayanapura,<br />
+                  Bengaluru, Karnataka 560077
                 </span>
               </li>
               <li className="flex gap-4 text-white/70 items-start">
