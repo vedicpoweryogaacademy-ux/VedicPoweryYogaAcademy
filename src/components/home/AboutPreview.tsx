@@ -19,8 +19,8 @@ export default function AboutPreview() {
           <div className="relative order-2 lg:order-1">
             <div className="relative rounded-3xl overflow-hidden shadow-xl border-4 border-white aspect-video max-w-2xl mx-auto lg:mx-0">
               <Image
-                src="/images/IMG_1855.PNG"
-                alt="Guruji at the 6th National Yoga Conclave"
+                src="/images/about-guruji.jpg"
+                alt="Shri Manjunath Sampath Guruji – Vedic Power Yoga Academy"
                 fill
                 sizes="(max-width: 1024px) 90vw, 45vw"
                 className="object-cover scale-[1.02]"

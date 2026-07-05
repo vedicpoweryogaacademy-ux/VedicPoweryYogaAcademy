@@ -50,4 +50,14 @@ export const galleryImages: GalleryImage[] = [
   { src: '/images/pose-prone.jpg', alt: 'Prone backbend pose', category: 'Poses' },
 
   { src: '/images/academy-banner.jpg', alt: 'Academy banner', category: 'Academy' },
+
+  // New Event Images
+  { src: '/images/event-whatsapp-01.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-02.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-03.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-04.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-05.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-06.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-07.jpg', alt: 'Yoga Event', category: 'Events' },
+  { src: '/images/event-whatsapp-08.jpg', alt: 'Yoga Event', category: 'Events' },
 ];

@@ -30,7 +30,7 @@ export default function ProgramsPreview() {
           </span>
           <h2 className="font-playfair text-4xl lg:text-5xl font-bold text-sacred-dark mt-2 mb-4">
             Yoga Programs for
-            <span className="text-gradient-gold block mt-2">Every Journey</span>
+            <span className="text-gradient-gold block mt-2 pb-2">Every Journey</span>
           </h2>
           <p className="text-sacred-brown/60 text-lg max-w-xl mx-auto font-light">
             12 specialized programs designed for all ages, fitness levels, and wellness goals

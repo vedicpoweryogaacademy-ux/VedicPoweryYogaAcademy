@@ -42,15 +42,15 @@ export default function AwardHighlight() {
 
           {/* Image */}
           <div className="w-full lg:w-[50%] xl:w-[45%] relative">
-            <div className="relative rounded-3xl overflow-hidden aspect-square sm:aspect-[4/3] lg:aspect-square xl:aspect-[4/5] shadow-2xl ring-1 ring-white/20 group">
+            <div className="relative rounded-3xl overflow-hidden aspect-square sm:aspect-[4/3] lg:aspect-square xl:aspect-[4/5] shadow-2xl group">
               <Image 
                 src="/images/award-hero.png" 
                 alt="Guruji receiving AYUSH Award for International Yoga Day"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-1000"
+                className="object-cover scale-[1.05] group-hover:scale-110 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-sacred-dark/90 via-sacred-dark/20 to-transparent opacity-80" />
+
             </div>
             {/* Decorative elements */}
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-saffron-500 rounded-full blur-[3rem] opacity-40 pointer-events-none" />
