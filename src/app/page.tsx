@@ -7,6 +7,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProgramsPreview from '@/components/home/ProgramsPreview';
 import HealthConditions from '@/components/home/HealthConditions';
 import MeetFounder from '@/components/home/MeetFounder';
+import VideoHighlight from '@/components/home/VideoHighlight';
 import TestimonialsPreview from '@/components/home/TestimonialsPreview';
 import GalleryPreview from '@/components/home/GalleryPreview';
 import ClassTimings from '@/components/home/ClassTimings';
@@ -27,6 +28,7 @@ export default function HomePage() {
       <StatsSection />
       <AwardHighlight />
       <MeetFounder />
+      <VideoHighlight hideShort={true} />
       <WhyChooseUs />
       <ProgramsPreview />
       <HealthConditions />

@@ -18,6 +18,7 @@ import {
   Users,
   Zap,
 } from 'lucide-react';
+import VideoHighlight from '@/components/home/VideoHighlight';
 
 
 export const metadata: Metadata = {
@@ -231,6 +232,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* ── Featured Video Section ── */}
+      <VideoHighlight showOnlyShort={true} />
+
       {/* ── Credentials Grid ── */}
       <section className="py-24 bg-sacred-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,7 +357,7 @@ export default function AboutPage() {
             {[
               { src: '/images/award-ayush.jpg', year: '2026', title: 'AYUSH Dept. Recognition Award', sub: 'Government of Karnataka — Dept. of AYUSH', span: 'md:col-span-2 lg:col-span-1' },
               { src: '/images/event-idy2026.jpg', year: '21 June 2026', title: '12th International Yoga Day', sub: 'Program Organizer — Karnataka Dept. of AYUSH, Bengaluru', span: '' },
-              { src: '/images/pose-warrior.jpg', year: '2023', title: 'Academy Inauguration', sub: 'Vedic Power Yoga Academy — Officially Established', span: '' },
+              { src: '/images/event-whatsapp-08.jpg', year: '2023', title: 'Academy Inauguration', sub: 'Vedic Power Yoga Academy — Officially Established', span: '' },
             ].map((item, i) => (
               <div
                 key={i}

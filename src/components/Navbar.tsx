@@ -12,6 +12,7 @@ const navLinks = [
   { href: '/about', label: 'About Guruji' },
   { href: '/programs', label: 'Yoga Programs' },
   { href: '/healing', label: 'Therapies' },
+  { href: '/products', label: 'Products' },
   { href: '/teachers', label: 'Our Teachers' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/testimonials', label: 'Success Stories' },

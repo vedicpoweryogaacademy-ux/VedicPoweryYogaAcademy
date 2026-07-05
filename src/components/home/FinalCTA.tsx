@@ -8,7 +8,7 @@ export default function FinalCTA() {
       {/* Background Image & Gradient */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: 'url("/images/pose-warrior.jpg")' }}
+        style={{ backgroundImage: 'url("/images/event-whatsapp-01.jpg")' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-sacred-dark via-sacred-dark/95 to-sacred-dark/80" />
       
