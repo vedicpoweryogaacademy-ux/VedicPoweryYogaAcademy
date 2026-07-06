@@ -95,6 +95,8 @@ function CustomSelect({ id, options, placeholder, required, icon: Icon }: { id: 
 
 export default function EnrollmentForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
   if (submitted) {
     return (
@@ -121,9 +123,58 @@ export default function EnrollmentForm() {
     <form
       id="enrollment-form"
       className="bg-white rounded-[2.5rem] p-8 sm:p-10 shadow-2xl shadow-saffron-500/5 border border-saffron-100 space-y-6 relative overflow-hidden"
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+        setError('');
+        
+        const name = (document.getElementById('form-name') as HTMLInputElement)?.value;
+        const phone = (document.getElementById('form-phone') as HTMLInputElement)?.value;
+        const program = (document.getElementById('form-program') as HTMLInputElement)?.value;
+        const batch = (document.getElementById('form-batch') as HTMLInputElement)?.value;
+        
+        if (!name || !phone || !program || !batch) {
+          setError('Please fill in all required fields (*).');
+          return;
+        }
+
+        const phoneRegex = /^\d{10}$/;
+        if (!phoneRegex.test(phone)) {
+          setError('Please enter a valid 10-digit phone number.');
+          return;
+        }
+        
+        const ageStr = (document.getElementById('form-age') as HTMLInputElement)?.value;
+        if (ageStr) {
+          const ageNum = parseInt(ageStr, 10);
+          if (ageNum < 1) {
+            setError('Please enter a valid age.');
+            return;
+          }
+        }
+
+        setIsSubmitting(true);
+        try {
+          const data = {
+            name,
+            age: (document.getElementById('form-age') as HTMLInputElement)?.value,
+            phone,
+            email: (document.getElementById('form-email') as HTMLInputElement)?.value,
+            program,
+            batch,
+            message: (document.getElementById('form-health') as HTMLTextAreaElement)?.value,
+          };
+
+          await fetch('https://script.google.com/macros/s/AKfycbxu4J_ytqqHXz_qVIBcDba87UtAeSOla-OpVUhTlEDYX834hY-rEgK7scSzA73TWQWc/exec', {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(data),
+          });
+          setSubmitted(true);
+        } catch (error) {
+          console.error('Submission failed:', error);
+        } finally {
+          setIsSubmitting(false);
+        }
       }}
     >
       <div className="absolute top-0 right-0 w-64 h-64 bg-saffron-500/10 rounded-full blur-[80px] pointer-events-none" />
@@ -153,6 +204,8 @@ export default function EnrollmentForm() {
             <input
               id="form-age"
               type="number"
+              min="1"
+              max="120"
               placeholder="Your age"
               className="w-full pl-12 pr-5 py-4 rounded-2xl border border-saffron-100 focus:border-saffron-400 focus:outline-none focus:ring-4 focus:ring-saffron-400/10 text-sacred-dark text-sm font-medium transition-all bg-[#FAFAF8] placeholder:font-normal"
             />
@@ -230,14 +283,25 @@ export default function EnrollmentForm() {
         </div>
       </div>
 
+      {error && (
+        <div className="relative z-10 p-4 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm font-medium text-center">
+          {error}
+        </div>
+      )}
+
       <button
         id="form-submit-btn"
         type="submit"
-        className="relative z-10 w-full py-4 rounded-2xl bg-gradient-to-r from-sacred-dark to-sacred-brown text-white font-bold text-sm uppercase tracking-widest shadow-xl shadow-sacred-dark/20 hover:shadow-saffron-500/40 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-3 group overflow-hidden"
+        disabled={isSubmitting}
+        className={`relative z-10 w-full py-4 rounded-2xl bg-gradient-to-r from-sacred-dark to-sacred-brown text-white font-bold text-sm uppercase tracking-widest shadow-xl shadow-sacred-dark/20 hover:shadow-saffron-500/40 transition-all duration-300 flex items-center justify-center gap-3 group overflow-hidden ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:-translate-y-1'}`}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-saffron-600 to-vermillion-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-        <Send size={18} className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-        <span className="relative z-10">Submit Enrollment Request</span>
+        {isSubmitting ? (
+          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin relative z-10" />
+        ) : (
+          <Send size={18} className="relative z-10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+        )}
+        <span className="relative z-10">{isSubmitting ? 'Submitting...' : 'Submit Enrollment Request'}</span>
       </button>
 
       <p className="relative z-10 text-sacred-brown/50 text-[11px] text-center font-bold uppercase tracking-widest pt-2">
